@@ -5,7 +5,7 @@ class Carousel {
         this.rightButton = this.carousel.querySelector(".right-button")
         this.carouselImages = this.carousel.querySelectorAll(".carousel img")
         // console.log(this.carouselImages);
-
+        
     }
     //Methods
     selectLeft() {
@@ -13,7 +13,7 @@ class Carousel {
     }
 
     selectRight() {
-        
+
     }
 }
 
