@@ -32,9 +32,13 @@ class Carousel {
             // 2nd way - 
         Array.from(this.carouselImages).forEach(img => img.style.display = "none")
 
-        // Add one to the index, until the last image
+        
         if (this.index < this.lastIndex) {
+            // Add one to the index, until the last image
             this.index += 1
+        } else if (this.index = this.lastIndex) { 
+            // When current index is last index, restart index to 0
+            this.index = 0;
         }
 
         this.carouselImages[this.index].style.display = "block"
@@ -53,15 +57,6 @@ class Carousel {
         // this.index += 1
         // this.carouselImages[this.index].style.display = "block"
     }
-}
-
-class Image {
-    // constructor(image) {
-    //     this.image = image
-    // }
-    // selectImg() {
-
-    // }
 }
 
 const carousel = new Carousel(document.querySelector(".carousel"))
