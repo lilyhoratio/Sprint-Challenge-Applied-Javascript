@@ -32,20 +32,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM, which stands for Document Object Model, is the representation of a web page. The DOM contains objects called nodes, which can be referenced and manipulated using JavaScript and other languages. HTML elements (e.g. `document.head`) are the most common node. 
+
 2. What is an event?
+
+An event is any user interaction on a website that is tracked by the browser. When the event occurs (a click, hover, scroll), it is triggered and can result in downstream effects. 
 
 3. What is an event listener?
 
+An event listener will "listen" for a specified event, and when it is triggered, fire a callback function (event handler) that performs a side-effect. 
+
 4. Why would we convert a NodeList into an Array?
+
+The NodeList is an array-like object (e.g. can use `.length` and index into child nodes) but does not actually inheret from the Array object. We would convert a NodeList into an Array to get access to and perform JavaScript array methods like `.filter()` and `.map()` on it. Because the DOM can be accessed by other languages, the NodeList doesn’t natively contain functionality for JavaScript methods to interact upon it.
 
 5. What is a component?
 
-### Git Set up
-
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+A component is simply a piece of code that can be applied to other elements so that they gain the same logical functionality and styling. They are used to avoid repetition of logic within your codebase under the principle of DRY. An example of a JavaScript component would be using class syntax and the constructor function to create references to or add event handlers to chosen elements passed into that constructor. 
 
 ## Minimum Viable Product
 
