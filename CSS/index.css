@@ -302,6 +302,3 @@ body {
   width: 100%;
   display: none;
 }
-.carousel img[data-image="1"] {
-  display: block;
-}
