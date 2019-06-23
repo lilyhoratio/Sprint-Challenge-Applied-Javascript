@@ -257,7 +257,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 400px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   margin-top: 16px;
@@ -301,4 +301,8 @@ body {
 .carousel img {
   width: 100%;
   display: none;
+}
+.carousel .img-show {
+  width: 100%;
+  display: block;
 }
