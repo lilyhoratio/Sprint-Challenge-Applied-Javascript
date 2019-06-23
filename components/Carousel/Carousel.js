@@ -13,16 +13,22 @@ class Carousel {
             // classList approach - why isn't adding the "img-show" class working?
         // console.log(this.carouselImages[this.index].classList.add("img-show"))
 
-        // How to trigger this only if user has clicked on carousel element first?
-        window.addEventListener("keydown", (event) => {           
-            if (event.key == "ArrowLeft") {
-                console.log(event)
-                this.loopLeft(event)
-            }
-            if (event.key == "ArrowRight") {
-                this.loopRight(event)
-            }
-        });
+        // How to trigger keydown event only if user has clicked on carouselImages element first?
+        // let carouselClicked = false;
+
+        this.carouselImages.forEach( image => {
+            image.addEventListener("click", () => {
+                console.log(event);
+                window.addEventListener("keydown", (event) => {           
+                    if (event.key == "ArrowLeft") {
+                        this.loopLeft(event)
+                    }
+                    if (event.key == "ArrowRight") {
+                        this.loopRight(event)
+                    }
+                })
+            })
+        })
 
         this.rightButton.addEventListener("click", () => this.loopRight())
         this.leftButton.addEventListener("click", () => this.loopLeft())
